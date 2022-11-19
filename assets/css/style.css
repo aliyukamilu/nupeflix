@@ -334,3 +334,57 @@ section.section {
 .iconnie.hidden {
   display: none;
 }
+
+/* account page */
+
+.homeB{
+  background-color: white;
+  height: 100vh;
+  color: #fff;
+}
+
+.mail{
+  padding: 10px;
+  border:1px solid#465865;;
+  outline: none;
+  width: 31%;
+  color:#465865 ;
+}
+ .bb {
+  border-radius: 6px;
+  width: 31%;
+
+}
+.hed{
+  color:#465865;
+  width: 500px;
+}
+
+.text-mail{
+  width: 500px;
+  color:#465865;
+  font-weight: 500;
+}
+
+#baner2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -70px;
+  display: none;
+}
+
+.tablee{
+  width: 1150px;
+  margin-top: 2em;
+}
+.tablee .col{
+  font-size: 30px;
+}
+.tablee td{
+  font-size: 24px;
+  color: #465865;
+  padding: 20px;
+}
