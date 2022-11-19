@@ -1,0 +1,336 @@
+@font-face {
+  font-family: Muli;
+  src: url("../fonts/Muli.ttf");
+}
+
+@font-face {
+  font-family: Muli-light;
+  src: url("../fonts/Mulish-Light.ttf");
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url("../fonts/Lato/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: LatoBlack;
+  src: url("../fonts/Lato/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: Itim;
+  src: url("../fonts/Itim/Itim-cRegular.ttf");
+}
+
+/* ::-webkit-scrollbar {
+  display: none
+} */
+
+:root {
+  --primaryCol: #A1A7B9;
+  --orange: #F7931e;
+  --lightBlue: #25B0E9;
+  --shadowedBlue: rgba(28, 123, 175, 0.78);
+  --fade-gray: #657482;
+}
+
+
+body {
+  background: #1E1E1E;
+  color: #fff;
+  font-family: Lato !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.heading {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 55px;
+  color: #fff;
+}
+
+.someinfo {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 38px;
+}
+
+.buttons {
+  background: var(--primaryCol);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 35px;
+  line-height: 31px;
+  letter-spacing: 0.035em;
+}
+
+.buttons:hover {
+  color: #fff;
+}
+
+section.section {
+  padding: 100px 50px;
+  background: #212121;
+  margin-bottom: 20px;
+}
+
+/* BANNER 
+*/
+
+.homeBanner {
+  background: url('../img/bg/homeBanner.png');
+  height: 100vh;
+  color: #fff;
+}
+
+.headers {
+  padding-top: 30px;
+}
+
+.headers img {
+  width: 200px;
+  height: 50px;
+}
+
+.bannerCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -80px;
+}
+
+.startedFormCont {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  height: 53px;
+  width: 65%;
+  margin-top: 20px;
+}
+
+.startedFormCont input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 100%;
+}
+
+.startedFormCont .buttons {
+  border-radius: 0;
+}
+
+.section_4 .accordion-item {
+  margin-bottom: 20px;
+}
+
+.section_4 .accordion-body {
+  background: #465865;
+}
+
+.section_4 .accordion-button {
+  background: #465865;
+  color: #fff;
+  font-family: LatoBlack;
+}
+
+.section_4 .accordion-button::after {
+  background-image: url('../img/icons/chevron.png');
+  margin-top: 10px;
+}
+
+/* HEADER 
+
+*/
+
+.navItems a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.rightNavItems button {
+  color: #fff;
+}
+
+/* movieBanner 
+ */
+.movieBanner {
+  background: url('../img/bg/movieBanner.png');
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  padding: 25px;
+}
+
+.movieBanner .movieInfo {
+  position: absolute;
+  top: 20%;
+}
+
+.movieBanner .movieInfo .movDesc {
+  width: 35%;
+}
+
+/* MYLIST 
+ */
+.myList {
+  margin-top: -70px;
+  z-index: 1;
+  position: relative;
+}
+
+.moviesCont {
+  height: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.movie {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.moviesCont img {
+  height: 100%;
+  object-fit: cover;
+  width: -webkit-fill-available;
+}
+
+.moviesPoster .movie:hover {
+  transform: scale(1.25);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.moviesInfo {
+  padding: 10px;
+  background: #1E1E1E;
+}
+
+.moviesInfo .btn {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin-right: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moviesInfo .btn.playBtn i {
+  margin-left: 2px;
+}
+
+.moviesInfo .btn.menuBtn {
+  padding: 5px 10px;
+}
+
+
+.moviesInfo .btn i {
+  text-align: center;
+  font-size: 14px;
+}
+
+.moviesInfo .timeInfo p {
+  margin-right: 10px;
+}
+
+.moviesInfo.hidden {
+  display: none;
+}
+
+/* MODAL */
+
+.modal-body {
+  background: #1E1E1E;
+  padding: 0;
+  height: 100vh;
+}
+
+.modal-body .videoCont {
+  height: 500px;
+}
+
+.someControls {
+  margin-top: -120px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.iconnie {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  margin-right: 10px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconnie:hover {
+  color: #fff;
+}
+.movieDesc {
+  padding: 20px;
+}
+
+.movieDesc .tags {
+  margin-right: 15px;
+}
+
+.moviedescription {
+  font-size: 14px;
+  color: #c6cad5;
+  width: 70%;
+}
+
+.movieDesc .castDra p {
+  color: #c6cad5;
+  font-size: 14px;
+}
+
+.movieDesc .castDra p span {
+  color: #fff;
+  font-size: 16px;
+}
+
+.moreLike .movie {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.moreLike .moviedescription {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#trailerVid {
+  object-fit: cover;
+}
+
+.trailerVidWrapper {
+  background: linear-gradient(0deg, #181818, transparent 50%);
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.iconnie.hidden {
+  display: none;
+}

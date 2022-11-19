@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NupeFlix</title>
+
+  <!-- FAVION ICON -->
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../assets/js/aos-master/dist/aos.css">
+</head>
+
+<body>
+
+  <header>
+    
+  </header>
+
+  <section class="movieBanner">
+    <div class="movieInfo">
+      <h1>Name of Movie</h1>
+      <p class="movDesc">Lorem ipsum dolor sit amet consectetur. Etiam porta diam magna habitant ac id curabitur
+        consequat quam. Tellus
+        enim maecenas sodales viverra ut risus pulvinar nec tempus. Tincidunt pretium tellus semper eu dictumst.
+        Consequat enim mauris condimentum tempor scelerisque praesent.</p>
+      <div class="d-flex">
+        <a href="play.html" class="btn buttons">
+          <i class="fas fa-play"></i> Play
+        </a>
+        <button class="btn buttons" style="margin-left: 15px; background: #a1a7b97d;">
+          <i class="fas fa-info-circle"></i> More info
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="myList px-3" id="myList">
+    <h4 class="mb-3">My List</h4>
+
+    <div class="moviesPoster" id="moviesPoster">
+      <div class="row" id="movies">
+        <!-- MOVIES FROM JS -->
+      </div>
+    </div>
+  </section>
+
+  <section class="continueWatch px-3" id="continueWatch">
+    <h4 class="mb-3">Continue Watching</h4>
+
+    <div class="moviesPoster" id="moviesPoster">
+      <div class="row" id="moviesConti">
+        <!-- MOVIES FROM JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVIE MODAL -->
+  <div class="modal fade" id="movInfoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="videoCont relative">
+            <div class="trailerVidWrapper"></div>
+            <video class="relative" id="trailerVid" width="100%" height="100%"
+              poster="../assets/img/moviePosters/mov3.png" autoplay muted>
+              <source src="../assets/videos/video1.mp4" type="video/mp4" />
+            </video>
+            <div class="someControls">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <a href="play.html" class="btn buttons cursor-pointer" id="trailerPlay" style="margin-right: 15px;">
+                    <i class="fas fa-play"></i> Play
+                  </a>
+                  <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>
+                  <button class='btn likeBtn iconnie' id='likeBtn'><i class='fas fa-thumbs-up'></i></button>
+                </div>
+
+                <div class="">
+                  <button class='btn hidden iconnie' id='UnmuteBtn'><i class='fas fa-volume-mute'></i></button>
+                  <button class='btn iconnie' id='muteBtn'><i class='fas fa-volume-up'></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="movieDesc">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <div class="d-flex align-items-center">
+                  <p class="tags">2019</p>
+                  <p class="tags">1h 23m</p>
+                  <p class="tags">HD</p>
+                  <p class="tags">10+</p>
+                </div>
+                <p class="moviedescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque nostrum
+                  tenetur suscipit minus ea quod
+                  veniam tempore officiis vitae ipsa.</p>
+              </div>
+              <div class="castDra">
+                <p><span>Casts : </span> Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                <p><span>Genres : </span> Drama</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="moreLike p-3">
+            <h4>More Like This</h4>
+
+            <div class="row" id="moreLike">
+              <div class="col-sm-4 mb-5">
+
+                <div class="movie">
+                  <div class="moviesCont">
+                    <img src="../assets/img/moviePosters/mov4.png" class="img-fluid">
+                  </div>
+                  <div class="moviesInfo">
+                    <div class='d-flex justify-content-between align-items-center'>
+                      <div class="d-flex align-items-center">
+                        <p class='mb-0' style="margin-right: 20px">13+</p>
+                        <p class='mb-0'>2019</p>
+                      </div>
+                      <div>
+                        <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>
+                      </div>
+                    </div>
+                    <p class="moviedescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate
+                      animi placeat sapiente
+                      libero recusandae esse facere sit, alias facilis!</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-4 mb-5">
+
+                <div class="movie">
+                  <div class="moviesCont">
+                    <img src="../assets/img/moviePosters/mov4.png" class="img-fluid">
+                  </div>
+                  <div class="moviesInfo">
+                    <div class='d-flex justify-content-between align-items-center'>
+                      <div class="d-flex align-items-center">
+                        <p class='mb-0' style="margin-right: 20px">13+</p>
+                        <p class='mb-0'>2019</p>
+                      </div>
+                      <div>
+                        <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>
+                      </div>
+                    </div>
+                    <p class="moviedescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate
+                      animi placeat sapiente
+                      libero recusandae esse facere sit, alias facilis!</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-4 mb-5">
+
+                <div class="movie">
+                  <div class="moviesCont">
+                    <img src="../assets/img/moviePosters/mov4.png" class="img-fluid">
+                  </div>
+                  <div class="moviesInfo">
+                    <div class='d-flex justify-content-between align-items-center'>
+                      <div class="d-flex align-items-center">
+                        <p class='mb-0' style="margin-right: 20px">13+</p>
+                        <p class='mb-0'>2019</p>
+                      </div>
+                      <div>
+                        <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>
+                      </div>
+                    </div>
+                    <p class="moviedescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate
+                      animi placeat sapiente
+                      libero recusandae esse facere sit, alias facilis!</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="../assets/js/aos-master/dist/aos.js"></script>
+  <script src="../assets/js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
