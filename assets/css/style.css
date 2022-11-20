@@ -343,16 +343,25 @@ section.section {
   color: #fff;
 }
 
+#baner4{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -150px;
+  display: none;
+}
+
 .mail{
   padding: 10px;
   border:1px solid#465865;;
   outline: none;
-  width: 31%;
+  width: 34%;
   color:#465865 ;
 }
  .bb {
   border-radius: 6px;
-  width: 31%;
+  width: 34%;
 
 }
 .hed{
@@ -367,7 +376,7 @@ section.section {
 }
 
 #baner2 {
-  display: flex;
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -387,4 +396,47 @@ section.section {
   font-size: 24px;
   color: #465865;
   padding: 20px;
+}
+
+.kk{
+  font-weight: 700;
+}
+
+.hedd{
+  color: #465865;
+}
+
+.topi{
+  margin-top: 2em;
+  margin-bottom: -45px;
+ margin-right: -250px;
+}
+
+.bbcard{
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px 35px;
+  line-height: 31px;
+  letter-spacing: 0.035em;
+  border: 1px solid #465865;
+  width: 31%;
+  display: flex;
+  height: 60px;
+  align-items: center;
+
+}
+
+#baner3 {
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: -70px;
+  display: none;
+}
+
+.heding{
+  font-weight: 700;
+  color: #465865;
 }
