@@ -20,6 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         allMovies();
     } elseif(isset($_GET['specificMovie'])){
         specificmovie();
+    }elseif(isset($_GET['movieBanner'])){
+        movieBanner();
     }
 }elseif ($_SERVER['REQUEST_METHOD'] == 'POST'){
     include 'sort.php';
