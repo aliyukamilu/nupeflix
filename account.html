@@ -20,7 +20,7 @@
 <body class="maintenancePage">
 
   <section class="homeB">
-    <div class="headers container">
+    <div class="headers container" style="padding-top: 0 !important;">
       <div class="d-flex justify-content-between align-items-center">
         <img src="./assets/img/logo.png" alt="">
         <a href="login.html" class="btn buttons">Sign In</a>
@@ -34,10 +34,13 @@
       <div class="FormMail m-3">
         <h4 class="text-mail">Email</h4>
         <h5 class="text-mail" id="mailer"></h5>
+
+        <input type="text" placeholder="Password" id="password" class="mail">
+        <small style="font-size: 12px; color: red; display: none;" id="warning">please input your password</small>
+        <button class="btn buttons bb w-100 mt-3" type="submit" id="next1">Next</button>
       </div>
-      
-        <input type="text" placeholder="Password" class="mail mb-3">
-        <button class="btn buttons bb" type="submit" id="next1">Next</button>
+
+
     </div>
 
     <div class="bannerCenter2" id="baner2">
@@ -48,7 +51,7 @@
         <table class="table">
           <thead>
             <tr>
-             
+
               <th scope="col" class="col"></th>
               <th scope="col" class="col">Free</th>
               <th scope="col" class="col">Basic</th>
@@ -67,22 +70,22 @@
             </tr>
             <tr>
               <td>Recommendation for you</td>
-              <td><img src="./assets/img/bi_dash-circle-fill.png" width="15%" alt=""></td>
+              <td><img src="./assets/img/bi_dash-circle-fill.png" width="25" alt=""></td>
               <td><img src="./assets/img/healthicons_yes.png" alt=""></td>
             </tr>
             <tr>
               <td>Ads</td>
               <td><img src="./assets/img/healthicons_yes.png" alt=""></td>
-              <td><img src="./assets/img/bi_dash-circle-fill.png" width="15%" alt=""></td>
+              <td><img src="./assets/img/bi_dash-circle-fill.png" width="25" alt=""></td>
             </tr>
             <tr>
               <td>Change or cancel plan anytime</td>
               <td><img src="./assets/img/healthicons_yes.png" alt=""></td>
               <td><img src="./assets/img/healthicons_yes.png" alt=""></td>
             </tr>
-            </tbody>
+          </tbody>
         </table>
-        
+
       </div>
       <button class="btn buttons bb mt-3" id="next2">Next</button>
     </div>
@@ -94,24 +97,25 @@
       <h5 class="hed text-center ">Your payment is encrypted and you can chenge how you pay anytime.</h5>
       <h5 class="hed text-center kk">Secure for peace of mind.</h5>
       <h5 class="hed text-center kk">Cancel easily online.</h5>
-        <p class="topi">
-          <label class="hedd">End-to-end encrypted</label>
-          <i class="fa fa-lock" style="color: #FDB44C; margin-left: 5px;" aria-hidden="true"></i>
-        </p>
-        <button class="btn bbcard m-5" type="submit" >
-          <label class="hedd">Credit or Debit Card</label>
-          <img src="./assets/img/[removal.ai]_tmp-637928f663bc8.png" width="50%" alt="">
-          <i class="fa fa-chevron-right fa-2x" style="margin-left: 25px; color: #A1A7B9;" aria-hidden="true"></i>
-        </button>
-        <button class="btn buttons bb mt-4" type="submit" id="next3">Done</button>
+      <p class="topi">
+        <label class="hedd">End-to-end encrypted</label>
+        <i class="fa fa-lock" style="color: #FDB44C; margin-left: 5px;" aria-hidden="true"></i>
+      </p>
+      <button class="btn bbcard m-5" type="submit">
+        <label class="hedd">Credit or Debit Card</label>
+        <img src="./assets/img/[removal.ai]_tmp-637928f663bc8.png" width="50%" alt="">
+        <i class="fa fa-chevron-right fa-2x" style="margin-left: 25px; color: #964E7F;" aria-hidden="true"></i>
+      </button>
+      <button class="btn buttons bb mt-4" type="submit" id="next3">Done</button>
+      <p class="errorMessage text-danger"></p>
     </div>
     <div class="bannerCenter4" id="baner4">
       <h2 class="hed text-center mt-5">Congratulations! You are now a member of Nupeflix</h2>
-        <a href="./app/home.html" class="btn buttons bb mt-5" type="submit" id="next4">Start watching</a>
+      <a href="./app/home.html" class="btn buttons bb mt-5" type="submit" id="next4">Start watching</a>
     </div>
   </section>
 
-  
+
 
   <section class="section_5 section" id="footer">
     <h1 class="heading text-center">Footer</h1>
@@ -126,8 +130,8 @@
   <script>
     AOS.init();
   </script>
+  <script src="assets/js/main.js"></script>
   <script src="assets/js/getMail.js"></script>
-  <script src="assets/js/index.js"></script>
 </body>
 
 </html>

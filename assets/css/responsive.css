@@ -11,10 +11,46 @@
     transform: scale(1);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+
+  .navItems {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .sideMenu.active {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #2d2d2d;
+    width: 40%;
+  }
+
 }
 
 @media (max-width: 768px) {
   .maintenancePage .container {
     max-width: 900px;
+  }
+}
+
+@media(max-width: 991px) {
+  .tablee {
+    width: 100%;
   }
 }

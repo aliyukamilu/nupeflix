@@ -1,0 +1,1 @@
+let HOST = 'http://localhost:8080/nupeFlix'

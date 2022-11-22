@@ -1,0 +1,3 @@
+$('#getStarted').on('click', function() {
+    
+})

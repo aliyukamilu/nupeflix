@@ -34,7 +34,7 @@
         <a href="play.html" class="btn buttons">
           <i class="fas fa-play"></i> Play
         </a>
-        <button class="btn buttons" style="margin-left: 15px; background: #a1a7b97d;">
+        <button class="btn buttons" style="margin-left: 15px; background: #964E7F7d;">
           <i class="fas fa-info-circle"></i> More info
         </button>
       </div>
@@ -53,7 +53,7 @@
   </section>
 
   <section class="continueWatch px-3" id="continueWatch">
-    <h4 class="mb-3">Continue Watching</h4>
+    <!-- <h4 class="mb-3">Continue Watching</h4> -->
 
     <div class="moviesPoster" id="moviesPoster">
       <div class="row" id="moviesConti">
@@ -70,15 +70,15 @@
           <div class="videoCont relative">
             <div class="trailerVidWrapper"></div>
             <video class="relative" id="trailerVid" width="100%" height="100%"
-              poster="../assets/img/moviePosters/mov3.png" autoplay muted>
-              <source src="../assets/videos/video1.mp4" type="video/mp4" />
+              poster="../assets/img/moviePosters/mov3.png" muted>
+              <source src="../assets/videos/video1.mp4" id="trailerVidSource" type="video/mp4" />
             </video>
             <div class="someControls">
               <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
-                  <a href="play.html" class="btn buttons cursor-pointer" id="trailerPlay" style="margin-right: 15px;">
+                  <button id="playVideo" class="btn buttons cursor-pointer" id="trailerPlay" style="margin-right: 15px;">
                     <i class="fas fa-play"></i> Play
-                  </a>
+                  </button>
                   <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>
                   <button class='btn likeBtn iconnie' id='likeBtn'><i class='fas fa-thumbs-up'></i></button>
                 </div>
@@ -91,12 +91,10 @@
             </div>
           </div>
 
-
-
           <div class="movieDesc">
             <div class="d-flex align-items-center justify-content-between">
               <div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center" id="videoInfo">
                   <p class="tags">2019</p>
                   <p class="tags">1h 23m</p>
                   <p class="tags">HD</p>
@@ -108,7 +106,7 @@
               </div>
               <div class="castDra">
                 <p><span>Casts : </span> Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <p><span>Genres : </span> Drama</p>
+                <p><span>Genres : </span> <span id="genre">Drama</span></p>
               </div>
             </div>
 
@@ -117,7 +115,7 @@
             <h4>More Like This</h4>
 
             <div class="row" id="moreLike">
-              <div class="col-sm-4 mb-5">
+              <div class="col-sm-6 col-md-4 mb-5">
 
                 <div class="movie">
                   <div class="moviesCont">
@@ -201,6 +199,7 @@
   <script>
     AOS.init();
   </script>
+  <script src="../assets/js/main.js"></script>
   <script src="../assets/js/nav.js"></script>
   <script src="../assets/js/index.js"></script>
 </body>

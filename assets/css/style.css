@@ -33,7 +33,7 @@
 } */
 
 :root {
-  --primaryCol: #A1A7B9;
+  --primaryCol: #964E7F;
   --orange: #F7931e;
   --lightBlue: #25B0E9;
   --shadowedBlue: rgba(28, 123, 175, 0.78);
@@ -65,6 +65,10 @@ body {
   line-height: 38px;
 }
 
+.text-small {
+  font-size: 14px;
+}
+
 .buttons {
   background: var(--primaryCol);
   color: #fff;
@@ -72,6 +76,45 @@ body {
   padding: 10px 35px;
   line-height: 31px;
   letter-spacing: 0.035em;
+}
+
+/* hamburger  */
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primaryCol);
+}
+
+.sideMenu {
+  position: fixed;
+  left: -100%;
+  transition: 0.3s;
+  height: 100%;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.sideMenu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sideMenu a:hover {
+  color: #25B0E9;
+  margin-left: 10px;
 }
 
 .buttons:hover {
@@ -82,6 +125,10 @@ section.section {
   padding: 100px 50px;
   background: #212121;
   margin-bottom: 20px;
+}
+
+header {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* BANNER 
@@ -163,6 +210,10 @@ section.section {
 
 .rightNavItems button {
   color: #fff;
+}
+
+.rightNavItems button:hover {
+  color: var(--primaryCol);
 }
 
 /* movieBanner 
@@ -286,6 +337,7 @@ section.section {
 .iconnie:hover {
   color: #fff;
 }
+
 .movieDesc {
   padding: 20px;
 }
@@ -337,82 +389,92 @@ section.section {
 
 /* account page */
 
-.homeB{
+.homeB {
   background-color: white;
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 30px;
   color: #fff;
 }
 
-#baner4{
+#baner4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-top: -150px;
+  /* margin-top: -150px; */
   display: none;
 }
 
-.mail{
+.mail {
   padding: 10px;
-  border:1px solid#465865;;
+  border: 1px solid#465865;
+  ;
   outline: none;
-  width: 34%;
-  color:#465865 ;
+  width: 100%;
+  color: #465865;
 }
- .bb {
+
+.bb {
   border-radius: 6px;
   width: 34%;
 
 }
-.hed{
-  color:#465865;
+
+.hed {
+  color: #465865;
   width: 500px;
 }
 
-.text-mail{
+.text-mail {
   width: 500px;
-  color:#465865;
+  color: #465865;
   font-weight: 500;
 }
 
+#baner {
+  margin-top: 0;
+}
+
 #baner2 {
-  
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-top: -70px;
+  margin-top: 70px;
   display: none;
 }
 
-.tablee{
-  width: 1150px;
+.tablee {
+  width: 70%;
   margin-top: 2em;
 }
-.tablee .col{
+
+.tablee .col {
   font-size: 30px;
 }
-.tablee td{
+
+.tablee td {
   font-size: 24px;
   color: #465865;
   padding: 20px;
 }
 
-.kk{
+.kk {
   font-weight: 700;
 }
 
-.hedd{
+.hedd {
   color: #465865;
 }
 
-.topi{
+.topi {
   margin-top: 2em;
   margin-bottom: -45px;
- margin-right: -250px;
+  margin-right: -250px;
 }
 
-.bbcard{
+.bbcard {
   background-color: white;
   border-radius: 6px;
   padding: 10px 35px;
@@ -427,16 +489,23 @@ section.section {
 }
 
 #baner3 {
-  
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-top: -70px;
+  margin-top: 0x;
   display: none;
 }
 
-.heding{
+.heding {
   font-weight: 700;
   color: #465865;
+}
+
+/* PLAY */
+
+.player video {
+  height: 80vh;
+  object-fit: cover;
 }
