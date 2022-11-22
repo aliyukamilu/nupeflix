@@ -94,6 +94,20 @@ async function getMovies() {
 }
 
 getMovies()
+
+async function getBannerMovie() {
+  const response = await fetch(`${HOST}/php/index.php?movieBanner&id=1`)
+  const moviesBanner = await response.json()
+
+  $('#bannerMovieName').html(moviesBanner[0].movie_title)
+  $('#BanMovDesc').html(moviesBanner[0].movie_description)
+
+  $('#bannerMov').on('click', function () {
+    window.location.href = `play.html?id=${moviesBanner[0].id}`
+  })
+}
+
+getBannerMovie()
 // movies.forEach((movie, i) => {
 //   $('#moviesConti').append(`
 //     <div class="col-sm-3 mb-5">
