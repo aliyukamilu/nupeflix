@@ -1,8 +1,8 @@
 $('header').html(`
   <div class="d-flex p-3 align-items-center justify-content-between">
     <div class="d-flex align-items-center flex-1">
-      <a href='home.html'>
-        <img src="../assets/img/logo.png" width="20%">
+      <a href='home.html' style="width: 15%;">
+        <img src="../assets/img/logo.png" width="100%">
       </a>
       <div class="navItems" style="padding-left: 40px;">
         <a href="home.html">Home</a>

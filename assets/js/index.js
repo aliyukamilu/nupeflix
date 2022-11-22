@@ -65,6 +65,7 @@ async function getMovies() {
         <p class="tags">12+</p>
       `)
       $('.moviedescription').html(moviedata[0].movie_description)
+      $('#theCast').html(moviedata[0].movie_cast)
       $('#genre').html(moviedata[0].movie_category)
       setTimeout(() => {
         trailerVid.play()

@@ -121,7 +121,7 @@ function specificMovie()
 function movieBanner(){
   include "includes/index.php";
   $id = $_GET['id'];
-  $query_User_re = sprintf("SELECT * FROM movies_banner");
+  $query_User_re = sprintf("SELECT * FROM movie_banner");
   $User_re = mysqli_query($nupeflix, $query_User_re) or die(mysqli_error($nupeflix));
   $row_User_re = mysqli_fetch_assoc($User_re);
   $totalRows_User_re = mysqli_num_rows($User_re);
