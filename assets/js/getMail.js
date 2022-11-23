@@ -20,7 +20,7 @@ const urlParams = new URLSearchParams(queryString);
 const maling = urlParams.get('email')
 let password = ""
 
-document.getElementById("mailer").textContent = maling;
+$('.mailer').html(maling);
 let passwordIn = document.querySelector('#password')
 $("#next1").click(function () {
   if (passwordIn.value == "") {
@@ -65,5 +65,43 @@ $("#next3").click(function () {
   createAccount()
 
 
+
+})
+
+$('#loginStart').click(function (e) {
+  e.preventDefault()
+  let email = document.querySelector('#emailInput').value
+  let password = document.querySelector('#passwordInput').value
+
+  $('#loginStart').attr('disabled', 'true')
+
+  async function loginMeIn() {
+    try {
+      const response = await fetch(`${HOST}/php/index.php?login&email=${email}&password=${password}`)
+      const loginData = await response.json()
+
+      console.log(loginData)
+      $('#loginStart').html('Logging you in 🍿......')
+
+      setTimeout(() => {
+        window.location.href = `app/home.html`
+      }, 2000);
+
+    } catch (error) {
+      $('.msg_Box').html('<p class="text-danger">User Not Found</p>')
+      $('#loginStart').removeAttr('disabled')
+    }
+
+  }
+  if (email == "" || password == "") {
+    $('.msg_Box').html('<p class="text-danger">Please fill in the blanks</p>')
+    setTimeout(() => {
+      $('.msg_Box').html('')
+      $('#loginStart').removeAttr('disabled')
+    }, 1000);
+
+  } else {
+    loginMeIn()
+  }
 
 })

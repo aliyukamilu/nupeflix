@@ -9,6 +9,8 @@ async function getMovie() {
   $('#movieName').html(movieData[0].movie_title)
   $('#movieDescr').html(movieData[0].movie_description)
   $('#categ').html(movieData[0].movie_category)
+
+  $('#videoCont').html(movieData[0].movie_link)
 }
 
 getMovie()

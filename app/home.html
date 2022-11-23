@@ -15,18 +15,26 @@
   <link rel="stylesheet" href="../assets/css/responsive.css">
   <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
   <link rel="stylesheet" href="../assets/js/aos-master/dist/aos.css">
+
+  <style>
+    .videoCont iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    
+
   </header>
 
   <section class="movieBanner">
     <div class="movieInfo">
       <h1 class="bannerMovieName" id="bannerMovieName">Name of Movie</h1>
-      <p class="movDesc" id="BanMovDesc">Lorem ipsum dolor sit amet consectetur. Etiam porta diam magna habitant ac id curabitur
+      <p class="movDesc" id="BanMovDesc">Lorem ipsum dolor sit amet consectetur. Etiam porta diam magna habitant ac id
+        curabitur
         consequat quam. Tellus
         enim maecenas sodales viverra ut risus pulvinar nec tempus. Tincidunt pretium tellus semper eu dictumst.
         Consequat enim mauris condimentum tempor scelerisque praesent.</p>
@@ -68,15 +76,20 @@
       <div class="modal-content">
         <div class="modal-body">
           <div class="videoCont relative">
-            <div class="trailerVidWrapper"></div>
-            <video class="relative" id="trailerVid" width="100%" height="100%"
+            <!-- <div class="trailerVidWrapper"></div> -->
+            <div id="videoCont" class="w-100" style="height: 100%">
+              
+            </div>
+
+            <!-- <video class="relative" id="trailerVid" width="100%" height="100%"
               poster="../assets/img/moviePosters/mov3.png" muted>
               <source src="../assets/videos/video1.mp4" id="trailerVidSource" type="video/mp4" />
-            </video>
+            </video> -->
             <div class="someControls">
               <div class="d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center">
-                  <button id="playVideo" class="btn buttons cursor-pointer" id="trailerPlay" style="margin-right: 15px;">
+                  <button id="playVideo" class="btn buttons cursor-pointer" id="trailerPlay"
+                    style="margin-right: 15px;">
                     <i class="fas fa-play"></i> Play
                   </button>
                   <button class='btn addBtn iconnie mr-2' id='addBtn'><i class='fas fa-plus'></i></button>

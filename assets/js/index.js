@@ -18,7 +18,7 @@ async function getMovies() {
         <div class="moviesInfo hidden">
           <div class='d-flex justify-content-between align-items-center mt-2 iconsBtn w-full'>
             <div class='d-flex align-items-center'>
-              <button class='btn playBtn' id='playBtn'><i class='fas fa-play'></i></button>
+              <button class='btn playBtn' data-movieid='${movie.movie_id}' id='playBtn'><i class='fas fa-play'></i></button>
               <button class='btn addBtn' id='addBtn'><i class='fas fa-plus'></i></button>
               <button class='btn likeBtn' id='likeBtn'><i class='fas fa-thumbs-up'></i></button>
             </div>
@@ -38,9 +38,14 @@ async function getMovies() {
 
   let movieConts = document.querySelectorAll('.moviesPoster .movie')
   let trailerVid = document.querySelector('#trailerVid')
-  let trailerVidSource = document.getElementById('trailerVidSource')
   let menuBtns = document.querySelectorAll('#menuBtn')
+  let playBtns = document.querySelectorAll('#playBtn')
 
+  playBtns.forEach((playBtn) => {
+    playBtn.addEventListener('click', () => {
+      window.location.href = `play.html?id=${playBtn.dataset.movieid}`;
+    })
+  })
   movieConts.forEach((movieCont, i) => {
     movieCont.addEventListener('mouseover', () => {
       let movieInfo = movieCont.querySelector('.moviesInfo')
@@ -56,7 +61,7 @@ async function getMovies() {
   menuBtns.forEach((menuBtn) => {
     menuBtn.addEventListener('click', () => {
       let moviedata = moviesData.filter(mov => mov.movie_id == menuBtn.dataset.movieid)
-      // trailerVidSource.setAttribute('src', moviedata[0].movie_link)
+      $('#videoCont').html(moviedata[0].movie_link)
       let releaseYear = moviedata[0].release_date.split('-')
       $('#videoInfo').html(`
         <p class="tags">${releaseYear[2]}</p>
@@ -68,7 +73,7 @@ async function getMovies() {
       $('#theCast').html(moviedata[0].movie_cast)
       $('#genre').html(moviedata[0].movie_category)
       setTimeout(() => {
-        trailerVid.play()
+        // trailerVid.play()
         $('#playVideo').on('click', function () {
           window.location.href = `play.html?id=${moviedata[0].movie_id}`;
         })
@@ -108,32 +113,4 @@ async function getBannerMovie() {
 }
 
 getBannerMovie()
-// movies.forEach((movie, i) => {
-//   $('#moviesConti').append(`
-//     <div class="col-sm-3 mb-5">
-//       <div class="movie">
-//         <div class="moviesCont">
-//           <img src="../assets/img/moviePosters/${movie.img}" class="img-fluid">
-//         </div>
-//         <div class="moviesInfo hidden">
-//           <div class='d-flex justify-content-between align-items-center mt-2 iconsBtn w-full'>
-//             <div class='d-flex align-items-center'>
-//               <button class='btn playBtn' id='playBtn'><i class='fas fa-play'></i></button>
-//               <button class='btn addBtn' id='addBtn'><i class='fas fa-plus'></i></button>
-//               <button class='btn likeBtn' id='likeBtn'><i class='fas fa-thumbs-up'></i></button>
-//             </div>
-//             <button class='btn menuBtn' id='menuBtn' data-bs-toggle="modal" data-bs-target="#movInfoModal"><i class="fas fa-ellipsis-v"></i></button>
-//           </div>
-//           <div class='d-flex timeInfo mt-3'>
-//             <p class='mb-0'>1h 23m</p>
-//             <p class='mb-0'>HD</p>
-//             <p class='mb-0'>12+</p>
-//           </div>
-//           <p class='mt-2 mb-0' style='font-size: 12px'>Drama</p>
-//         </div>
-//       </div>
-//     </div>
-//   `)
-// })
-
 
